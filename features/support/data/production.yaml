@@ -1,0 +1,12 @@
+url: 'http://ninjainvoices.herokuapp.com'
+
+users:
+  admin:
+    name: 'Kato Danzo'
+    email: 'kato.danzo@qaninja.com.br'
+    password: 'secret'
+  
+  analyst:
+    name: 'Fernando Papito'
+    email: 'papito@papito.io'
+    password: 'test#123'

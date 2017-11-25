@@ -1,0 +1,10 @@
+default: --format progress -p html -p qa -p chrome
+ci: --format progress -p json -p qa -p headless
+html: --format html --out=reports/feature.html
+json: --format json --out=reports/feature.json
+qa: ENVIRONMENT=qa
+production: ENVIRONMENT=production
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+

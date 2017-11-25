@@ -1,0 +1,12 @@
+url: 'http://ninjainvoices.herokuapp.com'
+
+users:
+  admin:
+    name: 'Admin QA'
+    email: 'admin-qa@ninvoices.com'
+    password: 'secret'
+  
+  analyst:
+    name: 'Analyst QA'
+    email: 'analyst-qa@teste.com'
+    password: 'test#123'

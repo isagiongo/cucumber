@@ -1,0 +1,413 @@
+[
+  {
+    "uri": "features/specs/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "Sendo um usuario do sistema Invoice\nPosso acessar minha conta\nPara poder cadastrar meus clientes e também lançar faturas",
+    "line": 3,
+    "elements": [
+      {
+        "id": "login;admin-faz-login",
+        "keyword": "Cenário",
+        "name": "Admin faz login",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 8
+          },
+          {
+            "name": "@logout",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38723
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38255
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que tenho um usuário com perfil \"admin\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54118
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço login",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:15"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/step_definitions/login_steps.rb:16:in `/^faço login$/'\nfeatures/specs/login.feature:12:in `Quando faço login'",
+              "duration": 40474930
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo o dashboard com a mensagem \"Olá,\" usuário \", seja bem vindo ao Invoices.\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:20"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo o email do usuário logado no menu superior",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/support/hooks.rb:16:in `After'",
+              "duration": 35052426
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/support/hooks.rb:2:in `After'",
+              "duration": 42960146
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)",
+              "duration": 41198521
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-login;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de login",
+        "description": "",
+        "line": 25,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@tentativa_login",
+            "line": 16
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21927
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20061
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que tenho o usuário \"admin-qa@ninvoices.com\" e senha \"test123\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33123
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço login",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:15"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/step_definitions/login_steps.rb:16:in `/^faço login$/'\nfeatures/specs/login.feature:25:in `Quando faço login'\nfeatures/specs/login.feature:20:in `Quando faço login'",
+              "duration": 42364385
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo a \"Senha inválida.\" de erro de autenticação",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/support/hooks.rb:16:in `After'",
+              "duration": 40103103
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)",
+              "duration": 38088618
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-login;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de login",
+        "description": "",
+        "line": 26,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@tentativa_login",
+            "line": 16
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20994
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21460
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que tenho o usuário \"usuarionaoexiste@ninvoices.com\" e senha \"secret\"",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32190
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço login",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:15"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/step_definitions/login_steps.rb:16:in `/^faço login$/'\nfeatures/specs/login.feature:26:in `Quando faço login'\nfeatures/specs/login.feature:20:in `Quando faço login'",
+              "duration": 45869441
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo a \"Usuário não cadastrado.\" de erro de autenticação",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/support/hooks.rb:16:in `After'",
+              "duration": 39543732
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)",
+              "duration": 35759223
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-login;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de login",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@tentativa_login",
+            "line": 16
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24726
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22393
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que tenho o usuário \"emailinvalido&ninvoices.com\" e senha \"secret\"",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34523
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço login",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:15"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/step_definitions/login_steps.rb:16:in `/^faço login$/'\nfeatures/specs/login.feature:27:in `Quando faço login'\nfeatures/specs/login.feature:20:in `Quando faço login'",
+              "duration": 47596543
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "vejo a \"Informe um email válido.\" de erro de autenticação",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)\n./features/support/hooks.rb:16:in `After'",
+              "duration": 35309953
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.15.1/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Could not find an executable [\"phantomjs\"] on your path. (Cliver::Dependency::NotFound)",
+              "duration": 35094881
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

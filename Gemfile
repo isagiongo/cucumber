@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'cucumber'
+gem 'capybara'
+gem 'rspec'
+gem 'selenium-webdriver'
+gem 'site_prism'
+gem 'mongo'
+gem 'faker'
+gem 'poltergeist'
+gem 'phantomjs'
